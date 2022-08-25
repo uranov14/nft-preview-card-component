@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --softBlue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --mainBG: hsl(217, 54%, 11%);
+    --cardBG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    display: block;
+    height: 667px;
+    background: var(--mainBG);
+}
+
+section {
+    display: flex;  
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 18px;
+    margin: 100px 19px; 
+    background-color: var(--cardBG);
+    border-radius: 15px;
+    width: min-content;
+}
+
+#image-equilibrium > img {
+    height: 300px;
+    cursor: pointer;
+    border-radius: 10px; 
+}
+
+#icon-view {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    background: hsla(178, 100%, 50%, 0.5) url("images/icon-view.svg") no-repeat center; 
+    z-index: 7;  
+}
+
+.hidden {
+    display: none;
+}
+
+.title {
+    margin: 20px 0;
+    color: var(--white);
+}
+
+.title:hover,
+span:hover {
+    cursor: pointer;
+    color: var(--cyan);
+}
+
+p {
+    color: var(--softBlue);
+}
+
+.desc {
+    margin-bottom: 1em;
+}
+
+.price-left {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price,
+.left {
+    display: flex;
+    align-items: center;
+}
+
+h4 {
+    color: var(--cyan);
+}
+
+.line {
+    
+    height: 1px;
+    margin: 20px 0;
+    background-color: var(--line);
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+#image-avatar {
+    width: 32px;
+}
+
+span {
+    color: var(--white);
+}
+
+@media (min-width: 650px) {
+    body {
+        height: 900px;
+        display: flex;
+        justify-content: center;
+    }
+
+    section {
+        padding-bottom: 0;
+        height: 600px;
+        box-shadow: 0 0 10px 20px hsl(217, 54%, 9%);
+    }
+
+   #image-equilibrium > img {
+    height: 300px;
+   }
+
+   .title {
+    font-size: 1.2em;
+   }
+
+   p {
+    font-size: 18px;
+   }
+}
